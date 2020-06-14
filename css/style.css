@@ -1,0 +1,315 @@
+@font-face {
+  font-family: gothamBold;
+  src: url(Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: gothamBook;
+  src: url(Gotham-Book.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #1bb1b2;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.responsive {
+  /* Set a specific height */
+  height: inherit;
+  max-width: 100%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .responsive {
+    max-height: 500px;
+  }
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2 {
+  font-family: gothamBold;
+}
+
+p {
+  font-family: gothamBook;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-top: 5em;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.card {
+  margin: 1em;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card .portrait {
+  width: 9.5em;
+  height: 9.5em;
+  border-radius: 100%;
+  margin-top: 1em;
+}
+
+.card .portrait:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .card h1 {
+    font-size: 2.5em;
+  }
+}
+
+.card p {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1em;
+  text-align: center;
+}
+
+#projects {
+  margin: 1em;
+  max-width: 100%;
+}
+
+#projects .projects-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+  margin: 1em;
+  padding: 0.5em;
+  color: #fff;
+  text-align: center;
+}
+
+#projects p {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #projects {
+    width: 80%;
+    left: 13%;
+  }
+}
+
+#projects > img {
+  width: 17em;
+  height: 15em;
+}
+
+@media (min-width: 992px) {
+  #projects > img {
+    width: 20em;
+  }
+}
+
+#projects > img::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+#projects .project-img {
+  position: relative;
+  left: -0.2em;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #projects .project-img {
+    left: 3em;
+  }
+}
+
+@media (min-width: 992px) {
+  #projects .project-img {
+    left: 6.5em;
+  }
+}
+
+#ux-ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  margin-top: 2.4em;
+  min-width: 100%;
+  height: auto;
+}
+
+#ux-ui .design-img {
+  margin: 0 auto;
+  padding: 1em;
+  width: 30em;
+  height: 20em;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+
+#ux-ui h1 {
+  text-align: center;
+  margin: 0.5em;
+}
+
+#ux-ui h1 h2 {
+  text-align: center;
+  margin: 1em;
+}
+
+@media (min-width: 992px) {
+  #ux-ui h1 {
+    margin: 1em;
+    padding: 0.5em;
+  }
+}
+
+#ux-ui p {
+  max-width: 80%;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #353f49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .icons {
+  margin: 1em;
+  width: 1em;
+  height: 1em;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .icons {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  footer .icons {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

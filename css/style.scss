@@ -1,0 +1,274 @@
+$bg: #1bb1b2;
+$fnt: #ff5c5c;
+$sh: #353f49;
+$max: 12;
+$tablet: 768px;
+$desktop: 992px;
+
+@font-face {
+  font-family: gothamBold;
+  src: url(Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: gothamBook;
+  src: url(Gotham-Book.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: $bg;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@mixin sml {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.responsive {
+  /* Set a specific height */
+  height: inherit;
+  max-width: 100%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include desktop {
+    max-height: 500px;
+  }
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2 {
+  font-family: gothamBold;
+}
+
+p {
+  font-family: gothamBook;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 5em;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.card {
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+
+  .portrait {
+    width: 9.5em;
+    height: 9.5em;
+    border-radius: 100%;
+    margin-top: 1em;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  h1 {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+
+    @include desktop {
+      font-size: 2.5em;
+    }
+  }
+
+  p {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+#projects {
+  margin: 1em;
+  max-width: 100%;
+
+  .projects-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin: 1em;
+    padding: 0.5em;
+    color: #fff;
+    text-align: center;
+  }
+
+  p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+  }
+
+  @include desktop {
+    width: 80%;
+    left: 13%;
+  }
+
+  & > img {
+    width: 17em;
+    height: 15em;
+
+    @include desktop {
+      width: 20em;
+    }
+  }
+
+  & > img::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+
+  .project-img {
+    position: relative;
+    left: -0.2em;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 1em;
+    object-fit: cover;
+    vertical-align: bottom;
+
+    @include tablet {
+      left: 3em;
+    }
+
+    @include desktop {
+      left: 6.5em;
+    }
+  }
+}
+
+#ux-ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 2.4em;
+  min-width: 100%;
+  height: auto;
+
+  .design-img {
+    margin: 0 auto;
+    padding: 1em;
+    width: 30em;
+    height: 20em;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 1em;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0.5em;
+
+    h2 {
+      text-align: center;
+      margin: 1em;
+    }
+
+    @include desktop {
+      margin: 1em;
+      padding: 0.5em;
+    }
+  }
+
+  p {
+    max-width: 80%;
+    margin: 1em;
+    padding: 0.5em;
+    text-align: center;
+  }
+}
+
+footer {
+  height: auto;
+  width: 100%;
+  background-color: $sh;
+  display: flex;
+  justify-content: space-evenly;
+
+  .icons {
+    margin: 1em;
+    width: 1em;
+    height: 1em;
+
+    @include tablet {
+      width: 2em;
+      height: 2em;
+    }
+
+    @include desktop {
+      width: 2.5em;
+      height: 2.5em;
+    }
+  }
+}

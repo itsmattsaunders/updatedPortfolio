@@ -1,0 +1,116 @@
+@font-face {
+  font-family: gothamBold;
+  src: url(Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: gothamBook;
+  src: url(Gotham-Book.otf);
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+  color: #eee;
+  z-index: 999;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  float: left;
+  margin-left: 1em;
+  font-family: gothamBook;
+}
+
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #ff5c5c;
+}
+
+nav a#openup {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #ff5c5c;
+  }
+  nav a#openup:after {
+    content: "|||";
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+  }
+  nav a#openup {
+    font-family: gothamBold;
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+/*# sourceMappingURL=navbar.css.map */
